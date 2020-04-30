@@ -1,0 +1,52 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  terraform_deploy:
+    name: 'Terraform Deploy'
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+
+      - name: 'Terraform init'
+        run: terraform init
+        working-directory: terraform
+
+      - name: 'Terraform validate'
+        run: terraform validate
+        working-directory: terraform
+
+      - name: 'Terraform apply'
+        run: terraform apply -auto-approve
+        working-directory: terraform
+
+  hugo_deploy:
+    name: "Hugo Deploy"
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+        with:
+          submodules: true # Grab Hugo Theme
+
+      - name: 'Hugo setup'
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: 'Hugo build'
+        run: hugo --minify
+        working-directory: site
+
+      - name: 'Hugo deploy'
+        run: aws s3 cp . s3://urquhart.io --recursive --acl public-read
+        working-directory: site/public

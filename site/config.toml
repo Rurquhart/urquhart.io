@@ -1,0 +1,50 @@
+baseURL = "http://urquhart.io"
+languageCode = "en-gb"
+defaultContentLanguage = "en"
+title = "Robbie Urquhart"
+theme = "hermit"
+# enableGitInfo = true
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+# googleAnalytics = "UA-123-45"
+
+[taxonomies]
+  tag = "tags"
+  # Categories are disabled by default.
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  themeColor = "#494f5c"
+
+  homeSubtitle = ""
+
+  justifyContent = false  # Set "text-align: justify" to `.content`.
+
+  relatedPosts = false  # Add a related content section to all single posts page
+
+  code_copy_button = true # Turn on/off the code-copy-button for code-fields
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/robbie-urquhart-27a6aab4/"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/rurquhart"
+
+[menu]
+
+  [[menu.main]]
+    name = "Projects"
+    url = "projects/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Hire me"
+    url = "cv/"
+    weight = 20

@@ -1,0 +1,21 @@
+name: lint
+on:
+  - pull_request
+jobs:
+  terraform_test:
+    name: 'Terraform lint'
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+
+      - name: 'Terraform format'
+        run: terraform fmt
+        working-directory: terraform
+
+      - name: 'Terraform validate'
+        run: terraform validate
+        working-directory: terraform
