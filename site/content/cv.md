@@ -1,5 +1,5 @@
 +++
-title = "Hire me"
+title = "CV"
 tags = []
 date = "2020-04-23"
 toc = true
@@ -9,7 +9,7 @@ I'm a dedicated and driven engineer with 4+ years of industry knowledge, current
 
 Practical experience in writing, maintaining and optimizing mission-critical tools hosted across multiple CSPs.
 
-Very interested in working as part of a internal tooling/platform or reliability team.
+I'm extremely interested in joining a team that builds and manages internal tooling and services. I draw a huge amount of enjoyment of abstracting and automating work for other engineers.
 
 On a more personal level, I'm an avid gamer, wannabe chef and fantasy book reader.
 
@@ -45,7 +45,8 @@ On a more personal level, I'm an avid gamer, wannabe chef and fantasy book reade
 
 ## Personal Projects
 
-- Created an open-source [GitHub Action](http://urquhart.io/projects/sceptre-action/) which abstracts deployment of CloudFormation stacks.
+- Created an open-source [GitHub Action](http://urquhart.io/projects/sceptre-action/) which abstracts CI/CD of CloudFormation stacks.
+- [Personal website](http://urquhart.io) using Terraform/Hugo and GitHub actions for CI/CD
 
 ---
 
@@ -80,5 +81,5 @@ In my free time, I am working towards a part time degree with the Open Universit
 | Amazon Web Services | Developer Associate           | Jun'19 |
 | Microsoft           | Azure DevOps AZ-400           | Oct'19 |
 | Microsoft           | Azure Administrator AZ-103    | Apr'20 |
-
+| HashiCorp           | Terraform Associate           | May'20 |
 ---
