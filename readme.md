@@ -1,5 +1,5 @@
 # urquhart.io
-
+![deploy](https://github.com/Rurquhart/urquhart.io/workflows/deploy/badge.svg)
 This repo holds the Hugo/Terraform configuration and content that creates my personal website, along with a deployment pipeline using GitHub Actions.
 
 ## Tools used:
