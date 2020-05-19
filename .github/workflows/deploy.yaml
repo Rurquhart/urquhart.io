@@ -29,6 +29,8 @@ jobs:
   hugo_deploy:
     name: "Hugo Deploy"
     runs-on: ubuntu-latest
+    needs:
+      - terraform_deploy
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}

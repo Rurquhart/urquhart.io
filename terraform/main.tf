@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 terraform {
-  required_version = "0.12.21" # Version available on GitHub Action runners
+  required_version = "0.12.24" # Version available on GitHub Action runners
 
   backend "s3" {
     bucket         = "rurq-tf-state"
